@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ninghao_flutter/demo/form_demo.dart';
 
 import 'demo/BasicDemo.dart';
 import 'demo/bottom_navigation_bar.dart';
 import 'demo/drawDemo.dart';
-import 'demo/layoutDemo.dart';
+import 'demo/form_demo.dart';
 import 'demo/listView_demo.dart';
 import 'demo/navigator_demo.dart';
 import 'demo/sliver_demo.dart';
@@ -20,14 +21,15 @@ class App extends StatelessWidget {
         primarySwatch: Colors.yellow,
         highlightColor: Color.fromRGBO(100, 100, 100, 0.5),
         splashColor: Colors.white70,
+        accentColor: Colors.blue,
       ),
-      // home: Home(),
+      // home: FormDemo(),
       // home: NavigatorDemo(),
-      initialRoute: '/',
+      initialRoute: '/form',
       routes: {
-        '/':(context) => Home(),
-        '/about':(context) => Page(title: "About",),
-        
+        '/': (context) => Home(),
+        '/form': (context) => FormDemo(),
+        '/about': (context) => Page(title: "About"),
       },
     );
   }
@@ -54,12 +56,12 @@ class Home extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.search),
               tooltip: 'search',
-              onPressed: null,
+              onPressed: (){},
             ),
             IconButton(
               icon: Icon(Icons.more_horiz),
               tooltip: 'more',
-              onPressed: null,
+              onPressed: (){},
             ),
           ],
           elevation: 0,
