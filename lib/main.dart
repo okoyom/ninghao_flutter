@@ -6,6 +6,7 @@ import 'demo/bottom_navigation_bar.dart';
 import 'demo/drawDemo.dart';
 import 'demo/form_demo.dart';
 import 'demo/listView_demo.dart';
+import 'demo/material_components.dart';
 import 'demo/navigator_demo.dart';
 import 'demo/sliver_demo.dart';
 import 'demo/viewDemo.dart';
@@ -25,11 +26,12 @@ class App extends StatelessWidget {
       ),
       // home: FormDemo(),
       // home: NavigatorDemo(),
-      initialRoute: '/form',
+      initialRoute: '/mdc',
       routes: {
         '/': (context) => Home(),
         '/form': (context) => FormDemo(),
         '/about': (context) => Page(title: "About"),
+        '/mdc':(context) => MaterialComponents(),
       },
     );
   }
